@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pandemieAndroid.VaccinCrud"
+             Title="Vaccin">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+
+            <Label Text="Vaccin:" />
+            <Editor  Text="{Binding Nume}" />
+
+            <Label Text="Pret:" />
+            <Editor  Text="{Binding Pret_achizitie}" />
+
+            <Label Text="Data la care a fost aprobat:" />
+            <Editor  Text="{Binding Data_aprobare, StringFormat='{0:dd/MM/yyyy}'}" />
+
+            <Label Text="Tip:" />
+            <Editor  Text="{Binding Producator}" />
+
+            <Label Text="Link:" />
+            <Editor  Text="{Binding Informatii}" />
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save"
+                Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1"
+                Text="Delete"
+                Clicked="OnDeleteButtonClicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

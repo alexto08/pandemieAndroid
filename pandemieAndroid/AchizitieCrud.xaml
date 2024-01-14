@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pandemieAndroid.AchizitieCrud"
+             Title="AchizitieCrud">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Label Text="Membru ID:" />
+            <Editor  Text="{Binding MembruID}" />
+
+            <Label Text="Vaccin ID:" />
+            <Editor  Text="{Binding VaccinID}" />
+
+            <Label Text="Cantitate:" />
+            <Editor  Text="{Binding Cantitate}" />
+
+            <Label Text="Data Achizitiei:" />
+            <Editor  Text="{Binding Data_achizitie, StringFormat='{0:dd/MM/yyyy}'}" />
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save"
+                        Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1"
+                        Text="Delete"
+                        Clicked="OnDeleteButtonClicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

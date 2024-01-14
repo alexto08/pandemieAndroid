@@ -1,0 +1,71 @@
+﻿@model IEnumerable<pandemieAndroid2.Models.Fond>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ordin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data_ordin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Masti)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vaccinuri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Testare)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ajutor_intreprinderi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tara)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ordin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_ordin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Masti)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vaccinuri)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Testare)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ajutor_intreprinderi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tara.ID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

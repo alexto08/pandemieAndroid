@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pandemieAndroid.TipPage"
+             Title="Tip">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adauga Tip"
+                  Clicked="OnTipAddedClicked" />
+    </ContentPage.ToolbarItems>
+    <StackLayout Margin="20">
+        <ListView x:Name="listView"
+               ItemSelected="OnListViewItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="ID: " />
+                            <Label Text="{Binding ID}" />
+                            <Label Text="Tip: " />
+                            <Label Text="{Binding Nume_tip}" />
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

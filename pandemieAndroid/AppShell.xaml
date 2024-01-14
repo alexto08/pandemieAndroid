@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="pandemieAndroid.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:pandemieAndroid"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+ Title="Home"
+ ContentTemplate="{DataTemplate local:MainPage}"
+ />
+        <ShellContent
+ Title="Vaccinuri"
+ ContentTemplate="{DataTemplate local:VaccinPage}"
+ />
+        <ShellContent
+Title="Producatori"
+ContentTemplate="{DataTemplate local:ProducatoriPage}"
+/>
+        <ShellContent
+Title="Tara"
+ContentTemplate="{DataTemplate local:TaraPage}"
+/>
+        <ShellContent
+Title="Fonduri"
+ContentTemplate="{DataTemplate local:FonduriPage}"
+/>
+        <ShellContent
+Title="Tip vaccin"
+ContentTemplate="{DataTemplate local:TipPage}"
+/>
+        <ShellContent
+Title="Stoc Necesar"
+ContentTemplate="{DataTemplate local:StocNecesarPage}"
+/>
+       
+    </TabBar>
+
+</Shell>

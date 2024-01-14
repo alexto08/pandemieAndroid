@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pandemieAndroid.FonduriCrud"
+             Title="Fonduri">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+
+
+            <Label Text="Ordin:" />
+            <Editor  Text="{Binding Ordin}" />
+
+            <Label Text="Masti:" />
+            <Editor  Text="{Binding Masti}" />
+
+            <Label Text="Vaccinuri:" />
+            <Editor  Text="{Binding Vaccinuri}" />
+
+            <Label Text="Testare:" />
+            <Editor  Text="{Binding Testare}" />
+
+            <Label Text="Ajutor intreprinderi:" />
+            <Editor  Text="{Binding Ajutor_intreprinderi}" />
+
+            <Label Text="Tara ID:" />
+            <Editor  Text="{Binding TaraID}" />
+
+            <Label Text="Data:" />
+            <Editor  Text="{Binding Data_ordin, StringFormat='{0:dd/MM/yyyy}'}" />
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save"
+                    Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1"
+                    Text="Delete"
+                    Clicked="OnDeleteButtonClicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
